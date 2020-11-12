@@ -1,0 +1,353 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section {
+  position: relative;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 650px;
+  background: #112d42;
+}
+
+section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 650px;
+  background: #03a9f4;
+}
+
+.contactForm {
+  width: 1100px;
+  height: 500px;
+  z-index: 5;
+  position: absolute;
+  margin: 70px auto;
+  padding: 50px 100px;
+  background: #fff;
+  box-shadow: 0 50px 50px rgba(0,0,0, 0.5);
+}
+
+.contactForm h2 {
+  color: #0f3959;
+  font-size: 27px;
+  font-weight: 500;
+}
+
+.contactForm .formBox {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 30px;
+}
+
+.contactForm .formBox .inputBox {
+  position: relative;
+  margin: 0 0 35px 0;
+}
+
+.contactForm .formBox .inputBox.w50 {
+  width: 47%;
+}
+
+.contactForm .formBox .inputBox.w100 {
+  width: 100%;
+}
+
+.contactForm .formBox .inputBox input,
+.contactForm .formBox .inputBox textarea {
+  width: 100% !important;
+  padding: 5px 0;
+  resize: none;
+  font-size: 18px;
+  font-weight: 300;
+  color: #333;
+  border: none;
+  border-bottom: 1px solid #777;
+  outline: none;
+}
+
+.contactForm .formBox .inputBox textarea {
+  min-height: 80px;
+}
+
+.contactForm .formBox .inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 18px;
+  font-weight: 300;
+  color: #333;
+  transition: 0.3s;
+  pointer-events: none;
+}
+
+.contactForm .formBox .inputBox input:focus ~ span,
+.contactForm .formBox .inputBox textarea:focus ~ span,
+.contactForm .formBox .inputBox input:valid ~ span,
+.contactForm .formBox .inputBox textarea:valid ~ span {
+  transform: translateY(-20px);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #ff568c;
+}
+
+/* validation css */
+.contactForm .formBox .inputBox input.invalid ~ span,
+.contactForm .formBox .inputBox textarea.invalid ~ span {
+  color: red;
+}
+
+/* validation css */
+.contactForm .formBox .inputBox input.invalid,
+.contactForm .formBox .inputBox textarea.invalid {
+  border-bottom: 1px solid red;
+}
+
+.contactForm .formBox .inputBox input[type="submit"] {
+  position: relative;
+  cursor: pointer;
+  background: #0f3959;
+  color: #fff;
+  border: none;
+  max-width: 150px;
+  padding: 12px;
+}
+
+.contactForm .formBox .inputBox input[type="submit"]:hover {
+  background: #ff568c;
+}
+
+
+
+
+
+/* ///////////////////////////////// RESPONSIVENESS /////////////////////////////// */
+
+
+@media only screen and (min-width: 992px) and (max-width: 1199px)
+{
+  section, section::before {
+    height: 600px;
+  }
+
+  .contactForm {
+    width: 900px;
+    height: 450px;
+    padding: 40px 60px;
+  }
+
+  .contactForm .formBox {
+    padding-top: 25px;
+  }
+  
+  .contactForm .formBox .inputBox input[type="submit"] {
+    max-width: 120px;
+    padding: 8px;
+  }  
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 991px)
+{
+  section, section::before {
+    height: 590px;
+  }
+
+  .contactForm {
+    width: 700px;
+    height: 450px;
+    padding: 40px 60px;
+  }
+
+  .contactForm h2 {
+    font-size: 24px;
+  }
+
+  .contactForm .formBox {
+    padding-top: 25px;
+  }
+
+  .contactForm .formBox .inputBox input,
+  .contactForm .formBox .inputBox textarea {
+    font-size: 15px;
+  }
+
+  .contactForm .formBox .inputBox input[type="submit"] {
+    max-width: 120px;
+    padding: 8px;
+  }
+}
+
+
+@media only screen and (min-width: 575px) and (max-width: 767px)
+{
+  section, section::before {
+    height: 660px;
+  }
+
+  .contactForm {
+    width: 480px;
+    height: 520px;
+    padding: 40px 60px;
+  }
+
+  .contactForm h2 {
+    font-size: 24px;
+  }
+
+  .contactForm .formBox .inputBox {
+    margin: 0 0 22px 0;
+  }
+
+  .contactForm .formBox .inputBox input,
+  .contactForm .formBox .inputBox textarea {
+    font-size: 15px;
+  }
+
+  .contactForm .formBox .inputBox.w50 {
+    width: 100%;
+  }
+
+  .contactForm .formBox .inputBox input[type="submit"] {
+    max-width: 120px;
+    padding: 8px;
+  } 
+
+  .contactForm .formBox .inputBox span {
+    font-size: 16px;
+  }
+}
+
+
+@media only screen and (min-width: 479px) and (max-width: 574px)
+{
+  section, section::before {
+    height: 630px;
+  }
+
+  .contactForm {
+    width: 400px;
+    height: 480px;
+    margin-left: 8%;
+    padding: 30px 40px;
+  }
+
+  .contactForm h2 {
+    font-size: 22px;
+  }
+
+  .contactForm .formBox .inputBox {
+    margin: 0 0 20px 0;
+  }
+
+  .contactForm .formBox .inputBox input,
+  .contactForm .formBox .inputBox textarea {
+    font-size: 13px;
+  }
+
+  .contactForm .formBox .inputBox.w50 {
+    width: 100%;
+  }
+
+  .contactForm .formBox .inputBox input[type="submit"] {
+    max-width: 100px;
+    padding: 8px;
+  } 
+
+  .contactForm .formBox .inputBox span {
+    font-size: 16px;
+  }
+}
+
+
+@media only screen and (min-width: 410px) and (max-width: 478px)
+{
+  section, section::before {
+    height: 630px;
+  }
+
+  .contactForm {
+    width: 320px;
+    height: 480px;
+    margin-left: 8%;
+    padding: 30px 40px;
+  }
+
+  .contactForm h2 {
+    font-size: 22px;
+  }
+
+  .contactForm .formBox .inputBox {
+    margin: 0 0 20px 0;
+  }
+
+  .contactForm .formBox .inputBox input,
+  .contactForm .formBox .inputBox textarea {
+    font-size: 13px;
+  }
+
+  .contactForm .formBox .inputBox.w50 {
+    width: 100%;
+  }
+
+  .contactForm .formBox .inputBox input[type="submit"] {
+    max-width: 100px;
+    padding: 8px;
+  } 
+
+  .contactForm .formBox .inputBox span {
+    font-size: 16px;
+  }
+}
+
+
+@media only screen and (max-width: 409px)
+{
+  section, section::before {
+    height: 570px;
+  }
+
+  .contactForm {
+    width: 250px;
+    height: 430px;
+    margin-left: 8%;
+    padding: 30px 20px;
+  }
+
+  .contactForm h2 {
+    font-size: 20px;
+    margin-bottom: -10px;
+  }
+
+  .contactForm .formBox .inputBox {
+    margin: 0 0 15px 0;
+  }
+
+  .contactForm .formBox .inputBox input,
+  .contactForm .formBox .inputBox textarea {
+    font-size: 11px;
+  }
+
+  .contactForm .formBox .inputBox.w50 {
+    width: 100%;
+  }
+
+  .contactForm .formBox .inputBox input[type="submit"] {
+    max-width: 100px;
+    padding: 8px;
+  } 
+
+  .contactForm .formBox .inputBox span {
+    font-size: 16px;
+  }
+}

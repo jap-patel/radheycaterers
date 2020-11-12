@@ -1,0 +1,61 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radhe Caterers | Gallery</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/menu-gallery.css' %}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- //////////////////////////////////////// NAVBAR ////////////////////////////////////// -->
+
+    <nav class="navbar justify-content-start">
+            <img src="{% static 'images/logo.jpg' %}" alt="logo can't be load" class="img-fluid">
+    
+            <ul class="nav">
+                <li class="nav-item">
+                        <a class="nav-link text-white" href="{% url 'index' %}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link text-white" href="{% url 'menu' %}">Menu</a>
+                    </li>
+                    <li class="nav-item active">
+                      <a class="nav-link text-white" href="{% url 'gallery' %}">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="{% url 'contact' %}">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+    
+
+    <h1>Our Gallery</h1>
+    <center><hr width="30%" color="black"></center>
+    <div class="horizontal">
+        <div class="menu-img">
+        <img src="{% static 'images/IMG-20201101-WA0009.jpg' %}" alt="gallery img">
+        <img src="{% static 'images/IMG-20201101-WA0010.jpg' %}" alt="gallery img">
+        <img src="{% static 'images/IMG-20201101-WA0007.jpg' %}" alt="gallery img">
+        <img src="{% static 'images/IMG-20201101-WA0008.jpg' %}" alt="gallery img">
+        <img src="{% static 'images/IMG-20201101-WA0011.jpg' %}" alt="gallery img">
+        <img src="{% static 'images/IMG-20201101-WA0006.jpg' %}" alt="gallery img">
+        <img src="{% static 'images/IMG-20201101-WA0012.jpg' %}" alt="gallery img">
+        <img src="{% static 'images/IMG-20201101-WA0013.jpg' %}" alt="gallery img">
+        <img src="{% static 'images/IMG-20201101-WA0014.jpg' %}" alt="gallery img">
+        </div>
+    </div>
+
+    <!-- ///////////////////////////////////// FOOTER //////////////////////////////////////// -->
+
+    {% include 'components/footer.html' %}
+
+    </body>
+    
+    </html>

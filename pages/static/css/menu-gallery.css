@@ -1,0 +1,143 @@
+.horizontal { 
+    margin: .5% 5% .5% 5%; 
+    padding: .5%; 
+    width: 80%; 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: auto; 
+    overflow-y: hidden; 
+    white-space: nowrap ; 
+    text-align: center;
+}
+
+h1{
+    font-family: 'Sarabun', sans-serif;
+    text-align: center;
+    margin: 35px 0 15px 0;
+}
+
+.menu-img img{
+    width: 60%;
+    background-size: 200%;
+    margin: 1.5%;
+    margin-bottom: 5%;
+    margin-top: 7%;
+    line-height: 110px;
+    max-width: 100%;
+    padding: 2px;
+} 
+
+.menu-img img:hover {
+    width: 90%;
+    transition: 0.5s;
+}
+
+
+
+
+/* ////////////////////////////////////////// RESPONSIVE //////////////////////////////////////////// */
+
+@media only screen and (min-width: 992px) and (max-width: 1199px){
+    .horizontal{
+        margin: none;
+        width: 80%;
+    }
+
+    .menu-img img{
+        width: 80%;
+    }
+    
+    h1{
+        font-size: 30px;
+        margin: 30px 0 0 0;
+    }
+    
+    .menu-img img:hover {
+        width: 100%;
+    }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 992px){
+    .horizontal{
+        margin: none;
+        width: 80%;
+    }
+
+    .menu-img img{
+        width: 80%;
+    }
+    
+    h1{
+        font-size: 28px;
+        margin: 30px 0 0 0;
+    }
+    
+    .menu-img img:hover {
+        width: 100%;
+    }
+}
+
+
+@media only screen and (min-width: 575px) and (max-width: 767px){
+    .horizontal{
+        margin: none;
+        width: 90%;
+    }
+
+    .menu-img img{
+        width: 80%;
+    }
+    
+    h1{
+        font-size: 26px;
+        margin: 30px 0 0 0;
+    }
+    
+    .menu-img img:hover {
+        width: 100%;
+    }
+}
+
+
+@media only screen and (min-width: 480px) and (max-width: 574px){
+    .horizontal{
+        margin: none;
+        width: 90%;
+    }
+
+    .menu-img img{
+        width: 80%;
+    }
+    
+    h1{
+        font-size: 22px;
+        margin: 30px 0 0 0;
+    }
+    
+    .menu-img img:hover {
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 479px){
+    .horizontal{
+        margin: none;
+        width: 90%;
+    }
+
+    .menu-img img{
+        width: 80%;
+    }
+    
+    h1{
+        font-size: 20px;
+        margin: 30px 0 0 0;
+    }
+    
+    .menu-img img:hover {
+        width: 100%;
+    }
+}

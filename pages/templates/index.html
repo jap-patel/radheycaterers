@@ -1,0 +1,96 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Radhe Caterers</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+  <!-- //////////////////////////////////////// NAVBAR ////////////////////////////////////// -->
+
+  <nav class="navbar justify-content-start">
+    <img src="{% static 'images/logo.jpg' %}" alt="logo can't be load" class="img-fluid">
+
+    <ul class="nav ">
+      <li class="nav-item active">
+        <a class="nav-link text-white" href="{% url 'index' %}">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="{% url 'menu' %}">Menu</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="{% url 'gallery' %}">Gallery</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="{% url 'contact' %}">Contact Us</a>
+      </li>
+    </ul>
+  </nav>
+
+
+  <!-- ////////////////////////////////////// LOGO WITH BG IMAGE ///////////////////////////// -->
+
+  <div class="loading-bg">
+    <div class="logo-section">
+      <div class="logo">
+        <!-- <img src="pp.jpg" alt="radhe caterers" class="logo">         -->
+        <img src="{% static 'images/logo.jpg' %}" alt="radhe caterers" class="img-fluid">
+      </div>
+      <h2>Serving Authentic Flavours <br> Since 2001</h2>
+    </div>
+  </div>
+
+
+  <!-- //////////////////////////////////////// ABOUT SECTION //////////////////////////////// -->
+
+  <div class="container home-about-us">
+    <div class="row">
+      <div class="col-sm-5">
+        <img src="{% static 'images/0001.jpg' %}" alt="radhe caterers">
+      </div>
+      <div class="col-sm-7 about">
+        <h6>Radhe by Paras</h6><br>
+        <p>Where quality ingredients meets<br>
+          skilled chefs and catering professionals<br>
+          to make your celebrations lifelong memorable,<br>
+          We believe great food should be<br>
+          a part of every celebration,small or big.<br>
+          From the most lavish wedding<br>
+          to the smallest house party,<br>
+          We can meet all your catering needs.<br>
+          Your family and friends might forget<br>
+          a lot of things about an event<br>
+          but amazing food will be remembered for the years!<br>
+          it is always most memorable and<br>
+          talked about aspect of any event.</p>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- /////////////////////////////////// BUTTONS //////////////////////////////////// -->
+
+  <div class="menu-icons">
+    <button class="btn menu"><a href="{% url 'menu' %}" class="text-white">Menu</a></button>
+    <button class="btn gallery"><a href="{% url 'gallery' %}" class="text-white">Gallery</a></button>
+    <button class="btn contactus"><a href="{% url 'contact' %}" class="text-white">Contact Us</a></button>
+  </div>
+
+
+  <!-- /////////////////////////////////// FOOTER ////////////////////////////////////// -->
+
+  {% include 'components/footer.html' %}
+
+</body>
+
+</html>

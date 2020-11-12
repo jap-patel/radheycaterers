@@ -1,0 +1,70 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radhe Caterers | Menu</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/menu-gallery.css' %}">
+</head>
+
+<body>
+
+    <!-- //////////////////////////////////////// NAVBAR ////////////////////////////////////// -->
+
+    <nav class="navbar justify-content-start">
+        <img src="{% static 'images/logo.jpg' %}" alt="logo can't be load" class="img-fluid">
+
+        <ul class="nav">
+            <li class="nav-item">
+                    <a class="nav-link text-white" href="{% url 'index' %}">Home</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link text-white" href="{% url 'menu' %}">Menu</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link text-white" href="{% url 'gallery' %}">Gallery</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link text-white" href="{% url 'contact' %}">Contact Us</a>
+            </li>
+        </ul>
+    </nav>
+
+
+    <!-- ////////////////////////////////////// MENU ///////////////////////////////////////   -->
+
+    <h1>OUR MENU</h1>   
+    <center><hr width="30%" color="black"></center>
+    <div class="horizontal">
+        <div class="menu-img">
+            <img src="{% static 'images/0004.jpg' %}" alt="menu" class="center">
+            <img src="{% static 'images/0005.jpg' %}" alt="menu">
+            <img src="{% static 'images/0006.jpg' %}" alt="menu">
+            <img src="{% static 'images/0007.jpg' %}" alt="menu">
+            <img src="{% static 'images/0008.jpg' %}" alt="menu">
+            <img src="{% static 'images/0009.jpg' %}" alt="menu">
+            <img src="{% static 'images/0010.jpg' %}" alt="menu">
+            <img src="{% static 'images/0011.jpg' %}" alt="menu">
+            <img src="{% static 'images/0012.jpg' %}" alt="menu">
+            <img src="{% static 'images/0013.jpg' %}" alt="menu">
+            <img src="{% static 'images/0014.jpg' %}" alt="menu">
+            <img src="{% static 'images/0015.jpg' %}" alt="menu">
+        </div>
+    </div>
+
+
+    <!-- ///////////////////////////////////// FOOTER //////////////////////////////////////// -->
+
+    {% include 'components/footer.html' %}
+
+</body>
+
+</html>
